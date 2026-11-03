@@ -7,9 +7,9 @@
     "pnpm": ">=11 <12"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "tsx scripts/validate-blog-assets.ts && BROWSERSLIST_IGNORE_OLD_DATA=true BASELINE_BROWSER_MAPPING_IGNORE_OLD_DATA=true next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && tsx scripts/validate-blog-assets.ts && BROWSERSLIST_IGNORE_OLD_DATA=true BASELINE_BROWSER_MAPPING_IGNORE_OLD_DATA=true next build",
+    "start": "node init && next start",
     "lint": "oxlint --ignore-path .gitignore",
     "lint:fix": "oxlint --ignore-path .gitignore --fix",
     "lint:strict": "oxlint --ignore-path .gitignore --deny-warnings",
@@ -19,9 +19,9 @@
     "test:targeted": "tsx --test tests/plan-usage-and-analytics.test.ts",
     "test:blog": "tsx --test tests/blog.test.ts tests/blog-editorial.test.ts tests/blog-demo.test.ts tests/auth-routes.test.ts tests/auth-bootstrap-wiring.test.ts tests/post-auth-bootstrap.test.ts tests/landing-auth-touchpoints.test.ts",
     "test:blog:http": "tsx --test tests/blog-http.test.ts",
-    "dev:demo": "next dev demos/app --port 3001",
-    "build:demo": "next build demos/app",
-    "start:demo": "next start demos/app --port 3001",
+    "dev:demo": "node init && next dev demos/app --port 3001",
+    "build:demo": "node init && next build demos/app",
+    "start:demo": "node init && next start demos/app --port 3001",
     "test:agent-readiness": "tsx --test tests/agent-readiness.test.ts",
     "test:agent-readiness:http": "tsx --test tests/agent-readiness-http.test.ts"
   },

@@ -29,7 +29,6 @@ yarn-error.log*
 # local env files
 .env*.local
 .env.prod
-.env.production
 
 # # docs folders (private)
 # /docs
@@ -64,3 +63,4 @@ next-env.d.ts
 
 # codex / local test artifacts
 .codex-tmp/
+config.bat
